@@ -28,12 +28,12 @@ install_dependencies() {
         thunar \
         gnome-icon-theme-full \
         pavucontrol \
-        texlive-*
+        #texlive-*
 }
 
 git_config() {
-    git config --global user.name "Chris Choi"
-    git config --global user.email "chutsu@gmail.com"
+    git config --global user.name "Stanley Brown"
+    git config --global user.email "stan.j.brown@gmail.com"
     git config --global push.default matching
 }
 
