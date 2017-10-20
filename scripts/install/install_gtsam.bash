@@ -1,11 +1,15 @@
 #!/bin/bash
+set -e
 
 get_deps() {
-  apt-get install libboost-all-dev
-  apt-get install libtbb-dev
+  sudo apt-get install -y  \
+      libboost-all-dev \
+      libtbb-dev 
 }
 
 build_gtsam() {
+  mkdir -p $HOME/bin
+  cd $HOME/bin
   git clone https://bitbucket.org/gtborg/gtsam.git
   cd gtsam
   mkdir -p build
@@ -17,4 +21,3 @@ build_gtsam() {
 
 get_deps
 build_gtsam
-

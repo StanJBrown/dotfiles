@@ -1,4 +1,4 @@
-# chutsu's dotfiles
+# Stan's personalized copy of chutsu's dotfiles
 
 **WARNING**: DO NOT BLINDLY USE MY CONFIGURATIONS, THEY CAN BE DANGEROUS TO
 YOUR NEEDS!
@@ -17,6 +17,5 @@ This dotfile repo contains configuration for:
     - vimperator
 
 
-## Install
-
-    curl -L https://git.io/vPzOt > init.sh && sh init.sh
+#install
+bash install.sh

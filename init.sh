@@ -28,7 +28,12 @@ install_dependencies() {
         thunar \
         gnome-icon-theme-full \
         pavucontrol \
-        #texlive-*
+        tmux \
+        texlive \
+        texlive-fonts-extra \
+        texlive-formats-extra \
+        texlive-latex-extra \
+        texlive-math-extra \
 }
 
 git_config() {
