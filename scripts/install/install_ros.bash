@@ -7,7 +7,7 @@ install_ros() {
     sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 
     sudo apt-get update
-    sudo apt-get install ros-kinetic-desktop
+    sudo apt-get install ros-kinetic-desktop -y
 
     sudo rosdep init
     rosdep update
