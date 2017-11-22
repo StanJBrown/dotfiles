@@ -15,6 +15,12 @@ install_ros() {
     sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 }
 
+setup_bash() {
+  echo "source /opt/ros/kinetic/setup.bash " >> ~/.bashrc
+  echo "source ${HOME}/catkin_ws/devel/setup.bash " >> ~/.bashrc
+  source ~/.bashrc
+}
+
 setup_catkin_ws() {
     cd $HOME
     mkdir -p catkin_ws
@@ -22,9 +28,10 @@ setup_catkin_ws() {
     mkdir -p src
     cd src
     catkin_init_workspace
-    cd $HOME/catkin_ws/
-    catkin build
+    cd $HOME/catkin_ws
+    catkin_make -j2
 }
 
 install_ros
+setup_bash
 setup_catkin_ws
