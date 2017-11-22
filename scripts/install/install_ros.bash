@@ -12,7 +12,7 @@ install_ros() {
     sudo rosdep init
     rosdep update
 
-    sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+    sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 }
 
 setup_catkin_ws() {
