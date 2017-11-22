@@ -27,4 +27,4 @@ setup_catkin_ws() {
 }
 
 install_ros
-
+setup_catkin_ws
