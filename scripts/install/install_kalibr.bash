@@ -38,7 +38,7 @@ install_kalibr () {
     cd ..
     rm -rf build
     rm -rf devel 
-    catkin build -j4
+    catkin_make -j4
 }
 
 # install_deps
