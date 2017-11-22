@@ -72,7 +72,7 @@ if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
 fi
 stty -ixon  # disable ctrl-s (software flow control)
 
-# START TMUX ON BASH STARTUP
+# # START TMUX ON BASH STARTUP
 if [ $OS == "LINUX" ]; then
     if which tmux 2>&1 >/dev/null; then  # check if tmux is installed
         #if tmux ls 2>&1 >/dev/null; then  # check if tmux already has sessions
@@ -83,8 +83,12 @@ if [ $OS == "LINUX" ]; then
     fi
 fi
 
+
 source /opt/ros/kinetic/setup.bash
 source ~/catkin_ws/devel/setup.bash
 
 alias catkin_ws="cd ~/catkin_ws/"
+alias todos='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
+
+
 

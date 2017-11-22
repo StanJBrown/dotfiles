@@ -25,7 +25,7 @@ get_deps() {
 build_opencv3() {
   mkdir -p $HOME/bin
   cd $HOME/bin
-  # git clone https://github.com/Itseez/opencv.git
+  git clone https://github.com/Itseez/opencv.git
   mkdir -p $HOME/bin/opencv/build
   cd $HOME/bin/opencv/build
   cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..

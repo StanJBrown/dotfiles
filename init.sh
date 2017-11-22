@@ -11,7 +11,7 @@ Darwin)
     ;;
 esac
 
-install_dependencies() {
+install_dependencies(){
     sudo apt-get update
     sudo apt-get install -y \
         xterm \
@@ -33,16 +33,16 @@ install_dependencies() {
         texlive-fonts-extra \
         texlive-formats-extra \
         texlive-latex-extra \
-        texlive-math-extra \
+        texlive-math-extra 
 }
 
-git_config() {
+git_config(){
     git config --global user.name "Stanley Brown"
     git config --global user.email "stan.j.brown@gmail.com"
     git config --global push.default matching
 }
 
-init_dotfiles() {
+init_dotfiles(){
     # REMOVE OLD DOTFILES
     echo "remove old dotfiles"
     rm -rf $HOME/.vim
@@ -74,7 +74,7 @@ init_dotfiles() {
     ln -fs $PWD/configs/gitconfig $HOME/.gitconfig
     ln -fs $PWD/screenlayout $HOME/.screenlayout
 
-    return 0;
+    return 0
 }
 
 init_vim() {
