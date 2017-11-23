@@ -90,5 +90,6 @@ source ~/catkin_ws/devel/setup.bash
 alias catkin_ws="cd ~/catkin_ws/"
 alias todos='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
 
+eval $(thefuck --alias)
 
 
