@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e # exit on first error
 CATKIN_FOLDER="${HOME}/catkin_ws/src"
-ROS_VERSION=kinetic
-
+ROS_VERSION="$(rosversion -d)"  # get the version of ros that is installed
 
 install_deps() {
     # sudo apt-get update
@@ -41,5 +40,6 @@ install_kalibr () {
     catkin_make -j4
 }
 
-# install_deps
+
+install_deps
 install_kalibr
