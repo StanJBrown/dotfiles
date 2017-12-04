@@ -16,8 +16,7 @@ install_ros() {
 }
 
 setup_bash() {
-  echo "source /opt/ros/kinetic/setup.bash " >> ~/.bashrc
-  echo "source ${HOME}/catkin_ws/devel/setup.bash " >> ~/.bashrc
+  echo "source /opt/ros/kinetic/setup.bash " >> ~/.bashrc 
   source ~/.bashrc
 }
 
@@ -30,6 +29,9 @@ setup_catkin_ws() {
     catkin_init_workspace
     cd $HOME/catkin_ws
     catkin_make -j2
+    
+    echo "source ${HOME}/catkin_ws/devel/setup.bash " >> ~/.bashrc
+    source ~/.bashrc
 }
 
 install_ros
