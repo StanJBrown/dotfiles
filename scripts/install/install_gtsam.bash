@@ -15,7 +15,7 @@ build_gtsam() {
   mkdir -p build
   cd build 
   cmake ..
-  make -j3
+  make -j4
   sudo make install
 }
 

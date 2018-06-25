@@ -29,7 +29,7 @@ build_opencv3() {
   mkdir -p $HOME/bin/opencv/build
   cd $HOME/bin/opencv/build
   cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
-  make -j4
+  make -j6
   sudo make install
 }
 
