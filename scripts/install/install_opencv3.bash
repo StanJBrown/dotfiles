@@ -22,10 +22,11 @@ get_deps() {
     libdc1394-22-dev
 }
 
-build_opencv3() {
+build_opencv32() {
   mkdir -p $HOME/bin
   cd $HOME/bin
   git clone https://github.com/Itseez/opencv.git
+  git checkout 3.2.0
   mkdir -p $HOME/bin/opencv/build
   cd $HOME/bin/opencv/build
   cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
@@ -34,4 +35,4 @@ build_opencv3() {
 }
 
 get_deps
-build_opencv3
+build_opencv32
