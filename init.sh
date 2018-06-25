@@ -90,7 +90,7 @@ init_vim() {
 init() {
     install_dependencies
     git_config
-
+    #
     init_dotfiles
     init_vim
     echo "Done! :)"
@@ -98,11 +98,12 @@ init() {
 
 install_libs() {
     bash scripts/install/install_ceres.bash
-    bash scripts/install/gtsam.bash
-    bash scripts/install/opencv3.bash
-    bash scripts/install/tgKinematics.bash
-    bash scripts/install/tgSlam.bash
+    bash scripts/install/install_gtsam.bash
+    bash scripts/install/install_opencv3.bash
+    bash scripts/install/install_tgKinematics.bash
+    bash scripts/install/install_tgSlam.bash
 }
 # MAIN
 init
+install_libs
 

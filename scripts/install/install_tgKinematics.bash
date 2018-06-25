@@ -7,6 +7,7 @@ build_tgKinematics() {
     git clone git@github.com:tgRobotics/tgKinematics.git
     cd tgKinematics
     mkdir -p build
+    cd build
     cmake ..
     make -j8
     sudo make install
