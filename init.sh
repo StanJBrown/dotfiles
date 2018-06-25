@@ -28,12 +28,12 @@ install_dependencies(){
         thunar \
         gnome-icon-theme-full \
         pavucontrol \
-        tmux \
-        texlive \
-        texlive-fonts-extra \
-        texlive-formats-extra \
-        texlive-latex-extra \
-        texlive-math-extra 
+        tmux
+        # texlive \
+        # texlive-fonts-extra \
+        # texlive-formats-extra \
+        # texlive-latex-extra \
+        # texlive-math-extra 
 }
 
 git_config(){
@@ -96,5 +96,13 @@ init() {
     echo "Done! :)"
 }
 
+install_libs() {
+    bash scripts/install/install_ceres.bash
+    bash scripts/install/gtsam.bash
+    bash scripts/install/opencv3.bash
+    bash scripts/install/tgKinematics.bash
+    bash scripts/install/tgSlam.bash
+}
 # MAIN
 init
+
