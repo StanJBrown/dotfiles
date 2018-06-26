@@ -36,6 +36,7 @@ function! Vundle()
     Plugin 'plasticboy/vim-markdown'
     Plugin 'sirtaj/vim-openscad'
     Plugin 'w0rp/ale'
+    Plugin 'rhysd/vim-clang-format'
 
 
     " All of your Plugins must be added before the following line'
@@ -392,6 +393,13 @@ function! MarkDownMode()
     let g:vim_markdown_math = 1
 endfunction
 
+function! ClangFormat()
+    let g:clang_format#style_options = {
+        \ "BasedOnStyle" : "llvm",
+        \ "IndentWidth" : 2,
+        \ "PointerAlignment" : "Left",
+        \ "DerivePointerAlignment" : "false"}
+endfunction
 
 " MAIN
 call Vundle()
@@ -414,3 +422,4 @@ call EasyGrep()
 call VimCompletesMe()
 call PythonMode()
 call MarkDownMode()
+call ClangFormat()
