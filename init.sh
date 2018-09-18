@@ -87,14 +87,14 @@ init_vim() {
     return 0;
 }
 
-init() {
-    install_dependencies
-    git_config
-    #
-    init_dotfiles
-    init_vim
-    echo "Done! :)"
-}
+# init() {
+#     install_dependencies
+#     git_config
+#     #
+#     init_dotfiles
+#     init_vim
+#     echo "Done! :)"
+# }
 
 install_libs() {
     bash scripts/install/install_ceres.bash
@@ -104,6 +104,8 @@ install_libs() {
     bash scripts/install/install_tgSlam.bash
 }
 # MAIN
-init
-install_libs
+# init
+# install_libs
+init_vim
+
 
