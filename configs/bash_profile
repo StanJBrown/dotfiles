@@ -84,7 +84,7 @@ if [ $OS == "LINUX" ]; then
 fi
 
 alias todos='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
-export CXX=clang++
+export CXX=clang++-5.0
 export ASAN_SYMBOLIZER_PATH=/usr/lib/llvm-5.0/bin/llvm-symbolizer
 export MSAN_SYMBOLIZER_PATH=/usr/lib/llvm-5.0/bin/llvm-symbolizer
 export ASAN_OPTIONS=symbolize=1

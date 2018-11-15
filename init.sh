@@ -100,12 +100,11 @@ install_libs() {
     bash scripts/install/install_ceres.bash
     bash scripts/install/install_gtsam.bash
     bash scripts/install/install_opencv3.bash
-    bash scripts/install/install_tgKinematics.bash
-    bash scripts/install/install_tgSlam.bash
 }
 # MAIN
 # init
 # install_libs
+init_dotfiles
 init_vim
 
 
