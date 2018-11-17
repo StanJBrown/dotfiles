@@ -30,18 +30,18 @@ build_opencv() {
   OPENCV_EXTRA_MODULES_PATH="$HOME/bin/opencv_contrib-3.4.0/modules"
 
   # # Get OpenCV and OpenCV contrib
-  # if [ ! -d opencv-3.4.0 ]; then
-  #     wget -O opencv-3.4.0.zip https://github.com/opencv/opencv/archive/3.4.0.zip
-  # fi
-  # if [ ! -d opencv_contrib-3.4.0 ]; then
-  #     wget -O opencv_contrib-3.4.0.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
-  # fi
-  #
-  # unzip -o opencv-3.4.0.zip
-  # unzip -o opencv_contrib-3.4.0.zip
+  if [ ! -d opencv-3.4.0 ]; then
+      wget -O opencv-3.4.0.zip https://github.com/opencv/opencv/archive/3.4.0.zip
+  fi
+  if [ ! -d opencv_contrib-3.4.0 ]; then
+      wget -O opencv_contrib-3.4.0.zip https://github.com/opencv/opencv_contrib/archive/3.4.0.zip
+  fi
+
+  unzip -o opencv-3.4.0.zip
+  unzip -o opencv_contrib-3.4.0.zip
 
 
-  # Build and install OpenCV 3.4.0 to $PREFIX (defined above)
+  # Build and install OpenCV 3.4.0 to /usr/local/lib
   cd opencv-3.4.0
   mkdir -p build && cd build
   cmake -G "Unix Makefiles" \
@@ -83,5 +83,5 @@ build_opencv() {
       sudo make install
 }
 
-# get_deps
+get_deps
 build_opencv
