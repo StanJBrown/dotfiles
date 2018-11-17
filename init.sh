@@ -28,12 +28,27 @@ install_dependencies(){
         thunar \
         gnome-icon-theme-full \
         pavucontrol \
-        tmux
+        tmux \
+        clang-5.0 \
+        clang-format-5.0 \
+        clang-tidy-5.0
+
+        # some tex stuff, this stuff can takea lot of time
         # texlive \
         # texlive-fonts-extra \
         # texlive-formats-extra \
         # texlive-latex-extra \
         # texlive-math-extra 
+
+        # update the alterantives to prefer clang-5.0 over the other possible versions on the system
+        sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-5.0 1000
+        sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-5.0 1000
+        sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-5.0 1000
+        sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-5.0 1000
+        sudo update-alternatives --config clang++
+        sudo update-alternatives --config clang
+        sudo update-alternatives --config clang-format
+        sudo update-alternatives --config clang-tidy
 }
 
 git_config(){
@@ -102,9 +117,10 @@ install_libs() {
     bash scripts/install/install_opencv3.bash
 }
 # MAIN
+ install_dependencies
 # init
 # install_libs
-init_dotfiles
-init_vim
+# init_dotfiles
+# init_vim
 
 
