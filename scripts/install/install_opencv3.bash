@@ -75,7 +75,7 @@ build_opencv() {
       -DBUILD_opencv_world=OFF \
       -DBUILD_opencv_matlab=OFF \
       -DCMAKE_BUILD_TYPE=Release \
-      -DCMAKE_INSTALL_PREFIX=/usr/local/lib \
+      -DCMAKE_INSTALL_PREFIX=/usr/local \
       -DOPENCV_ENABLE_NONFREE=ON \
       -DOPENCV_EXTRA_MODULES_PATH="$OPENCV_EXTRA_MODULES_PATH" \
       ..
