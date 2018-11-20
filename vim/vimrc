@@ -37,6 +37,7 @@ function! Vundle()
     Plugin 'sirtaj/vim-openscad'
     Plugin 'w0rp/ale'
     Plugin 'rhysd/vim-clang-format'
+    Plugin 'stfl/meson.vim'
 
 
     " All of your Plugins must be added before the following line'
